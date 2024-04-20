@@ -63,6 +63,7 @@ router.post('/users', (req, res) => {
       createdAt: Date.now(),
       thought: req.body.thought,
     },
+    ReturnValues: 'ALL_OLD',
   };
   // database call
   dynamodb.put(params, (err, data) => {
