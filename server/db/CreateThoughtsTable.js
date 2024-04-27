@@ -1,8 +1,17 @@
 const AWS = require('aws-sdk');
 
+//AWS cloud settings
 AWS.config.update({
     region: 'us-east-2',
   });
+
+//Start local server with sharedDB local endpoint (DynamoDB creates a single database file named shared-local-instance.db.)
+//java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+//local config settings:
+// AWS.config.update({
+//   region: "local",
+//   endpoint: "http://localhost:8000"
+// });
 
 const dynamodb = new AWS.DynamoDB({ apiVersion: '2012-08-10' });
 
