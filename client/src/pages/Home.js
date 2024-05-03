@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('/api/users');
+        const res = await fetch('http://18.118.24.133/api/users');
         const jsonData = await res.json();
         const _data = jsonData.sort((a, b) =>
           a.createdAt < b.createdAt ? 1 : -1,

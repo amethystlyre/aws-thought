@@ -30,7 +30,7 @@ const ThoughtForm = () => {
     // send image file to endpoint with the postImage function
     const postImage = async () => {
       try {
-        const res = await fetch('/api/image-upload', {
+        const res = await fetch('http://18.118.24.133/api/image-upload', {
           mode: 'cors',
           method: 'POST',
           body: data,
@@ -53,7 +53,7 @@ const ThoughtForm = () => {
 		event.preventDefault();
 
 		const postData = async () => {
-			const res = await fetch("/api/users", {
+			const res = await fetch("http://18.118.24.133/api/users", {
 				method: "POST",
 				headers: {
 					Accept: "application/json",
