@@ -37,6 +37,7 @@ const ThoughtForm = () => {
         });
         if (!res.ok) throw new Error(res.statusText);
         const postResponse = await res.json();
+		console.log("postResponse:",postResponse)
         setFormState({ ...formState, image: postResponse.Location });
         return postResponse.Location;
       } catch (error) {
